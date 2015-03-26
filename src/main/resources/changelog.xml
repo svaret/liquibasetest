@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+                            http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="liquibase-docs" id="createTable-example">
+        <validCheckSum>7:0eee88f64190550ff4f161855fe6f4dd</validCheckSum>
+        <createTable tableName="apaerson">
+            <column name="address" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase-docs" id="table exists">
+        <createTable tableName="apaerson">
+            <column name="address" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="liquibase-docs" id="unik table">
+        <createTable tableName="unik">
+            <column name="address" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="liquibase-docs" id="med-sql">
+        <validCheckSum>7:3ee72d14b50fd371015692b59a88cdde</validCheckSum>
+        <sql>
+            CREATE TABLE unik12 (address VARCHAR(255) NULL);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
